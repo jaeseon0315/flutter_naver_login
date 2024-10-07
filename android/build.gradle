@@ -38,6 +38,10 @@ android {
         jvmTarget = JavaVersion.VERSION_1_8
     }
 
+    kotlin.sourceSets.all {
+        it.languageSettings.enableLanguageFeature("DataObjects")
+    }
+
     sourceSets {
         main.java.srcDirs += "src/main/kotlin"
         test.java.srcDirs += "src/test/kotlin"
